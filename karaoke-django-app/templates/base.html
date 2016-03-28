@@ -1,0 +1,17 @@
+{% load static from staticfiles %}
+
+<!doctype html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %} - Django Karaoke</title>
+        <link rel="stylesheet" href="{% static 'css/normolize.css' %}">
+        
+        <link rel="stylesheet" href="static 'css/layout.css' %}">
+    </head>
+    <body>
+        <h1>Django Karaoke!</h1>
+        <p><a href="{% url 'songs:list' %}">Upcoming Songs</a></p>
+        
+        {% block content %}{% endblock %}
+    </body>
+</html>
